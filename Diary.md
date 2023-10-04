@@ -8,6 +8,20 @@ Development machine:
 - Android Studio Giraffe 2022.3.1 Patch 2
 - OpenJDK 16 (from Homebrew, see diary below)
 
+## Links to resources
+
+- [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
+  and the
+  [Getting started](https://github.com/JetBrains/compose-multiplatform/#readme)
+  guide
+- Compose Multiplatform
+  [example project](https://github.com/JetBrains/compose-multiplatform/tree/master/examples)
+- Compose Multiplatform [project template](https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme)
+- Jetpack Compose
+  [documentation](https://developer.android.com/jetpack/compose) and
+  [material UI components](https://developer.android.com/jetpack/compose/components)
+
+
 
 ## Creating the project template
 
@@ -132,6 +146,8 @@ _Wednesday, Oct 4th 2023_
   [example project](https://github.com/JetBrains/compose-multiplatform/blob/master/examples/imageviewer),
   for example, uses custom
   [localization code](https://github.com/JetBrains/compose-multiplatform/blob/master/examples/imageviewer/shared/src/commonMain/kotlin/example/imageviewer/Localization.kt).
+  Some [discussion](https://github.com/JetBrains/compose-multiplatform/issues/425)
+  on this topic.
 - Created custom
   [localization code](./shared/src/commonMain/kotlin/Localization.kt)
   to the project.
