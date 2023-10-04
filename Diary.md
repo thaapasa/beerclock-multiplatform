@@ -104,3 +104,15 @@ Learning Compose:
   documentation and added a standard Material UI menu bar to the app.
   Next step: learn about `suspend` functions and how to open a drawer
   from top menu buttons.
+- Noticed that looking at Jetpack Compose documentation can be
+  misleading since not everything seems to be available out-of-the-box.
+  Using just Jetpack Compose might be simpler, but I'm not ditching
+  iOS support just yet.
+- Compose Multiplatform did not seem to have all the components readily
+  available, so I could not create e.g. the navigation drawer menu
+  exactly like the
+  [Compose example](https://developer.android.com/jetpack/compose/components/drawer)
+  shows. Luckily I found
+  [this example](https://www.netguru.com/blog/multiplatform-adaptive-ui)
+  for creating UIs for Compose Multiplatform.
+- Created openable side menu. Yay! 🙌
