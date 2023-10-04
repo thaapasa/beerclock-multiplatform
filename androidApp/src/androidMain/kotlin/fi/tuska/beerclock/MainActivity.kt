@@ -1,6 +1,5 @@
-package com.myapplication
+package fi.tuska.beerclock
 
-import MainView
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity

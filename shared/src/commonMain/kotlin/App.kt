@@ -1,3 +1,5 @@
+package fi.tuska.beerclock
+
 import androidx.compose.material.DrawerState
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton

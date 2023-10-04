@@ -1,3 +1,5 @@
+package fi.tuska.beerclock
+
 import androidx.compose.ui.text.intl.Locale
 
 val strings = when(Locale.current.language) {

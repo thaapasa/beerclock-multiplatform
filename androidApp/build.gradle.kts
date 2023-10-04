@@ -17,7 +17,7 @@ kotlin {
 
 android {
     compileSdk = (findProperty("android.compileSdk") as String).toInt()
-    namespace = "com.myapplication"
+    namespace = "fi.tuska.beerclock"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
