@@ -9,7 +9,7 @@ val strings = when(Locale.current.language) {
 }
 
 interface Strings {
-    val appName: String get() = "Beer Clock"
+    val appName: String
     val menu: String
     val menuSettings: String
     val menuDrinks: String
@@ -17,6 +17,7 @@ interface Strings {
 }
 
 object EnStrings : Strings {
+    override val appName = "Beer Clock"
     override val menu = "Menu"
     override val menuSettings = "Settings"
     override val menuDrinks = "Drinks"
@@ -24,6 +25,7 @@ object EnStrings : Strings {
 }
 
 object FiStrings : Strings {
+    override val appName = "Kaljakello"
     override val menu = "Valikko"
     override val menuSettings = "Asetukset"
     override val menuDrinks = "Juomat"

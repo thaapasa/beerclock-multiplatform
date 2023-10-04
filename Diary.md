@@ -21,8 +21,6 @@ Development machine:
   [documentation](https://developer.android.com/jetpack/compose) and
   [material UI components](https://developer.android.com/jetpack/compose/components)
 
-
-
 ## Creating the project template
 
 _Wednesday, Oct 4th 2023_
@@ -33,33 +31,41 @@ Getting project template running on all platforms:
 - Generated project from
   [template](https://github.com/JetBrains/compose-multiplatform-template).
 - Installed OpenJDK 21 (and pointed `JAVA_HOME` to it):
+
   ```sh
   brew install openjdk
   ````
+
   Although it seems that Android Studio will use the bundled Java 17
   instead. Oh well.
 - Installed and run KDoctor:
+
   ```sh
   brew install kdoctor
   kdoctor
   # and for more details
   kdoctor -v
   ````
+
 - Updated [Android Studio](https://developer.android.com/studio)
   to latest version (Giraffe, 2022.3.1 Patch 2)
 - Installed Kotlin Multiplatform Mobile
   [plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile).
 - `./gradlew run` from command line threw error:
+
   ```
   Unknown Kotlin JVM target: 21
   ```
+
   Okay, so this Compose setup seems to require Java 17.
   Some googling reveals that it might be possible to use Java 21 but
   just target Java 17.
 - Installed OpenJDK 17 (and pointer `JAVA_HOME` to it):
+
   ```sh
   brew install openjdk@17
   ```
+
 - `./gradlew run` works! 🎉
 - Installed Android emulator targeting API 34 (Android 14).
 - `./gradlew installDebug` works and installs app on emulator. Similarly
@@ -151,3 +157,16 @@ _Wednesday, Oct 4th 2023_
 - Created custom
   [localization code](./shared/src/commonMain/kotlin/Localization.kt)
   to the project.
+- Added localization customization to Android project
+  [configuration](./androidApp/build.gradle.kts):
+
+  ```groovy
+  androidResources {
+    generateLocaleConfig = true
+  }
+  ```
+
+  Also added localizations for the project name under Android string
+  resources. This was enough to allow changing the project language
+  in Android's own app configuraten menu, and it works with the
+  custom localization code.
