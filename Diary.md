@@ -1,6 +1,7 @@
 # Project diary
 
 Development machine:
+
 - Apple M1 Max MacBook Pro with 64 GB of memory
 - MacOS Sonoma 14.0
 - XCode 15.0
@@ -57,3 +58,49 @@ Getting project template running on all platforms:
   that `Apply Changes successfully finished in 36ms` but the emulator
   updated after about a second.
 - We have a working app!
+
+Learning Compose:
+
+- To get started with Compose, I copy-pasted the example application
+  [main class](./shared/src/commonMain/kotlin/App.kt) code to ChatGPT+,
+  with this leading text:
+
+  > This is the sample code file from a Jetpack Compose Multiplatform
+  template project. Can you go through it line by line and explain what
+  the lines mean? I have basic knowledge of Kotlin but not of Compose.
+
+  The results were quite informative, like:
+
+  ```
+  @Composable
+
+  The @Composable annotation indicates that the function is a
+  composable function. Composable functions can be called and will
+  produce UI. This is a core concept in Jetpack Compose.
+  ```
+
+  and
+
+  ```
+  MaterialTheme {
+
+  This applies the MaterialTheme, which is a part of Jetpack Compose's
+  Material Design components. It provides consistent theming for your
+  UI components.
+  ```
+
+  and
+
+  ```
+  var greetingText by remember { mutableStateOf("Hello, World!") }
+
+  Here, a mutable state is being declared for greetingText. remember is
+  a function that remembers a value across recompositions.
+  mutableStateOf provides a way to hold state that can trigger
+  recomposition when changed. The initial value of greetingText is
+  "Hello, World!".
+  ```
+- Had more conversations with ChatGPT and also Compose's own
+  documentation and added a standard Material UI menu bar to the app.
+  Next step: learn about `suspend` functions and how to open a drawer
+  from top menu buttons.
