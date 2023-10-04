@@ -8,7 +8,10 @@ Development machine:
 - Android Studio Giraffe 2022.3.1 Patch 2
 - OpenJDK 16 (from Homebrew, see diary below)
 
-## Wednesday, Oct 4th 2023
+
+## Creating the project template
+
+_Wednesday, Oct 4th 2023_
 
 Getting project template running on all platforms:
 
@@ -59,7 +62,9 @@ Getting project template running on all platforms:
   updated after about a second.
 - We have a working app!
 
-Learning Compose:
+## Learning Compose UI
+
+_Wednesday, Oct 4th 2023_
 
 - To get started with Compose, I copy-pasted the example application
   [main class](./shared/src/commonMain/kotlin/App.kt) code to ChatGPT+,
@@ -116,3 +121,17 @@ Learning Compose:
   [this example](https://www.netguru.com/blog/multiplatform-adaptive-ui)
   for creating UIs for Compose Multiplatform.
 - Created openable side menu. Yay! 🙌
+
+## What about localization?
+
+_Wednesday, Oct 4th 2023_
+
+- It seems that localization may not be directly supported, at least in
+  a similar way as it's supported for native Android apps.
+  The ImageViewer
+  [example project](https://github.com/JetBrains/compose-multiplatform/blob/master/examples/imageviewer),
+  for example, uses custom
+  [localization code](https://github.com/JetBrains/compose-multiplatform/blob/master/examples/imageviewer/shared/src/commonMain/kotlin/example/imageviewer/Localization.kt).
+- Created custom
+  [localization code](./shared/src/commonMain/kotlin/Localization.kt)
+  to the project.

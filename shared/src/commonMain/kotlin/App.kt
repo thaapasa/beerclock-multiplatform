@@ -1,4 +1,3 @@
-import androidx.compose.material.Button
 import androidx.compose.material.DrawerState
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
@@ -18,7 +17,7 @@ fun App() {
     val scaffoldState = rememberScaffoldState()
     MaterialTheme {
         Scaffold(scaffoldState = scaffoldState, topBar = {
-            TopAppBar(title = { Text("Kaljakello") }, actions = {
+            TopAppBar(title = { Text(strings.appName) }, actions = {
                 ToggleDrawerButton(scaffoldState.drawerState)
             })
         }, drawerContent = {
@@ -46,7 +45,7 @@ fun ToggleDrawerButton(drawerState: DrawerState) {
     }) {
         Icon(
             imageVector = Icons.Default.Menu,
-            contentDescription = "Valikko",
+            contentDescription = strings.menu,
         )
     }
 }
