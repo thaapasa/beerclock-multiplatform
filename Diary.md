@@ -186,4 +186,32 @@ _Thursday, Oct 5th 2023_
   how to type Composables that take other Composable as parameter
   (some lambda-wrapping was needed because `@Composable` references
   are not supported out-of-the-box).
+- Noticed that Compose has a `@Preview` annotation for Composables
+  that works with IDE to support showing a preview of the UI inside the
+  IDE. But ... it's not supported for Multiplatform 🙄. There are
+  [reports](https://slack-chats.kotlinlang.org/t/12111122/do-ide-previews-work-in-a-compose-multiplatform-setup-i-m-no)
+  that suggest you can get it working for the Android-only code, but
+  if I'm targeting multiplatform that's kinda missing the point.
+- Text component is provided out-of-the-box by Compose (and works
+  in Multiplatform as well), but couldn't find a standard dropdown
+  selector. Googling found
+  [this example](https://gist.github.com/snicmakino/297d34e429c078624fde6771064ed6d2?permalink_comment_id=4051239),
+  so created a custom selector based on that.
 
+## Navigation
+
+_Thursday, Oct 5th 2023_
+
+- Aha! Compose seems to be built on top of a "single-Activity" mindset.
+  It seems that others have also noticed that state handling was a pain
+  with the previous model of firing up new Activities and having to
+  recreate state from scratch. This is promising!
+- Unfortunately again it seems that for Compose
+  [navigation](https://developer.android.com/jetpack/compose/navigation)
+  is part of the standard library, but for Multiplatform the standard
+  library is
+  [not working](https://github.com/JetBrains/compose-multiplatform/tree/master/tutorials/Navigation)
+  and you need to use
+  [external libraries](https://github.com/terrakok/kmp-awesome#-compose-ui).
+- Trying out [Appyx](https://bumble-tech.github.io/appyx/) next for
+  navigation.

@@ -1,12 +1,9 @@
 package fi.tuska.beerclock.ui
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.Button
 import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -14,28 +11,18 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import fi.tuska.beerclock.getPlatformName
-import org.jetbrains.compose.resources.ExperimentalResourceApi
-import org.jetbrains.compose.resources.painterResource
+import fi.tuska.beerclock.domain.Gender
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
-fun MainScreen(innerPadding: PaddingValues) {
+fun MainScreen() {
 
-    var greetingText by remember { mutableStateOf("Hello, World!") }
-    var showImage by remember { mutableStateOf(false) }
+    var ageText by remember { mutableStateOf("70") }
+    var gender by remember { mutableStateOf(Gender.MALE) }
+
     Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-        Button(onClick = {
-            greetingText = "Hello, ${getPlatformName()}"
-            showImage = !showImage
-        }) {
-            Text(greetingText)
-        }
-        AnimatedVisibility(showImage) {
-            Image(
-                painterResource("compose-multiplatform.xml"),
-                contentDescription = "Compose Multiplatform icon"
-            )
-        }
+        TextField(value = ageText,
+            onValueChange = { ageText = it },
+            label = { Text(text = strings.settings.ageLabel) })
+        GenderSelector(initialValue = gender)
     }
 }

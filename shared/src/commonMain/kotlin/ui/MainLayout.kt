@@ -25,11 +25,8 @@ fun MainLayout(content: @Composable (PaddingValues) -> Unit) {
             })
         }, drawerContent = {
             DrawerContent()
-        }, drawerGesturesEnabled = true
-        ) { innerPadding ->
-            // This is where your main screen content goes
-            content(innerPadding)
-        }
+        }, drawerGesturesEnabled = true, content = content
+        )
     }
 }
 
@@ -47,7 +44,7 @@ fun ToggleDrawerButton(drawerState: DrawerState) {
     }) {
         Icon(
             imageVector = Icons.Default.Menu,
-            contentDescription = strings.menu,
+            contentDescription = strings.menu.main,
         )
     }
 }

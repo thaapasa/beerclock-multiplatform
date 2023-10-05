@@ -6,7 +6,7 @@ import fi.tuska.beerclock.ui.MainScreen
 
 @Composable
 fun App() {
-    MainLayout(content = { paddingValues -> MainScreen(paddingValues) })
+    MainLayout(content = { MainScreen() })
 }
 
 expect fun getPlatformName(): String

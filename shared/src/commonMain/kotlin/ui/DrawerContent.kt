@@ -13,9 +13,9 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun DrawerContent() {
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top) {
-        Text(text = strings.menuSettings, modifier = Modifier.padding(16.dp).clickable { /* Handle click */ })
-        Text(text = strings.menuDrinks, modifier = Modifier.padding(16.dp).clickable { /* Handle click */ })
-        Text(text = strings.menuStatistics, modifier = Modifier.padding(16.dp).clickable { /* Handle click */ })
+        Text(text = strings.menu.settings, modifier = Modifier.padding(16.dp).clickable { /* Handle click */ })
+        Text(text = strings.menu.drinks, modifier = Modifier.padding(16.dp).clickable { /* Handle click */ })
+        Text(text = strings.menu.statistics, modifier = Modifier.padding(16.dp).clickable { /* Handle click */ })
         // Add more items or custom drawer content here
     }
 }
