@@ -27,10 +27,9 @@ import androidx.compose.ui.unit.sp
 import fi.tuska.beerclock.settings.Gender
 
 @Composable
-fun GenderSelector(initialValue: Gender) {
+fun GenderSelector(selectedValue: Gender, onSelectGender: (gender: Gender) -> Unit) {
     val options = Gender.values().toList()
     var expanded by remember { mutableStateOf(false) }
-    var selectedOption by remember { mutableStateOf(initialValue) }
 
     Box(
         contentAlignment = Alignment.CenterStart,
@@ -39,7 +38,7 @@ fun GenderSelector(initialValue: Gender) {
             .clickable { expanded = !expanded },
     ) {
         Text(
-            text = strings.forGender(selectedOption),
+            text = strings.forGender(selectedValue),
             fontSize = 14.sp,
             modifier = Modifier.padding(start = 10.dp)
         )
@@ -49,7 +48,7 @@ fun GenderSelector(initialValue: Gender) {
         DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             options.forEach { selectionOption ->
                 DropdownMenuItem(onClick = {
-                    selectedOption = selectionOption
+                    onSelectGender(selectionOption)
                     expanded = false
                 }) {
                     Text(text = strings.forGender(selectionOption))

@@ -7,17 +7,26 @@ import fi.tuska.beerclock.util.safeToDouble
 
 internal class UserStore {
 
-    var state: UserStore by mutableStateOf(initialState())
+    var state: UserStore by mutableStateOf(UserStore())
         private set
 
-    fun onSetGender(gender: Gender) {
+    init {
+        this.loadFromPrefs()
+    }
+
+    fun setGender(gender: Gender) {
+        if (state.gender == gender) {
+            return
+        }
         setState { copy(gender = gender) }
+        val prefs = PreferenceProvider.getPrefs()
+        prefs.setString(PreferenceKeys.gender, gender.toString())
     }
 
     /**
      * @param weight weight, in kilograms
      */
-    fun onSetWeight(weight: Double) {
+    fun setWeight(weight: Double) {
         if (state.weightKg == weight) {
             return
         }
@@ -26,7 +35,7 @@ internal class UserStore {
         prefs.setString(PreferenceKeys.weight, weight.toString())
     }
 
-    fun loadFromPrefs() {
+    private fun loadFromPrefs() {
         val prefs = PreferenceProvider.getPrefs()
         val weightStr = prefs.getString(PreferenceKeys.weight, state.weightKg.toString())
         val genderStr = prefs.getString(PreferenceKeys.gender, state.gender.toString())
@@ -37,9 +46,6 @@ internal class UserStore {
             )
         }
     }
-
-    private fun initialState(): UserStore =
-        UserStore()
 
     private inline fun setState(update: UserStore.() -> UserStore) {
         state = state.update()
@@ -56,4 +62,5 @@ internal class UserStore {
         const val weight = "prefs.user.weight"
         const val gender = "prefs.user.gender"
     }
+
 }

@@ -2,7 +2,6 @@ package fi.tuska.beerclock.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
@@ -19,8 +18,7 @@ import fi.tuska.beerclock.util.safeToDouble
 @Composable
 fun MainScreen() {
 
-    val userPrefs = UserStore()
-    remember { userPrefs.loadFromPrefs() }
+    val userPrefs = remember { UserStore() }
 
     var weightText by remember { mutableStateOf(userPrefs.state.weightKg.toString()) }
     var gender by remember { mutableStateOf(userPrefs.state.gender) }
@@ -28,14 +26,18 @@ fun MainScreen() {
     LaunchedEffect(weightText) {
         val weightVal = safeToDouble(weightText)
         if (weightVal != null) {
-            userPrefs.onSetWeight(weightVal)
+            userPrefs.setWeight(weightVal)
         }
+    }
+
+    LaunchedEffect(gender) {
+        userPrefs.setGender(gender)
     }
 
     Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
         TextField(value = weightText,
             onValueChange = { weightText = it },
             label = { Text(text = strings.settings.weightLabel) })
-        GenderSelector(initialValue = gender)
+        GenderSelector(selectedValue = gender, onSelectGender = { gender = it })
     }
 }
