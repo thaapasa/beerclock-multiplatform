@@ -236,3 +236,7 @@ _Thursday, Oct 5th 2023_
   [external libraries](https://github.com/terrakok/kmp-awesome#-compose-ui).
 - Trying out [Appyx](https://bumble-tech.github.io/appyx/) next for
   navigation.
+
+## TODO:
+
+- Charts: [AAY-chart](https://github.com/TheChance101/AAY-chart)
