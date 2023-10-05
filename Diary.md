@@ -197,6 +197,27 @@ _Thursday, Oct 5th 2023_
   selector. Googling found
   [this example](https://gist.github.com/snicmakino/297d34e429c078624fde6771064ed6d2?permalink_comment_id=4051239),
   so created a custom selector based on that.
+- Storing user preferences is also something that needs to be manually
+  handled for each platform. Google provided some
+  [examples](https://medium.com/@shmehdi01/shared-preference-in-kmm-kotlin-multiplatform-2bca14214093),
+  and ChatGPT also, with a similar approach. However, both of these
+  failed to mention the Android-specific problem regarding `Context`s.
+  More specifically, when working in the common, shared code, the
+  context is not accessible at all, but it is required for some of
+  the Android-specific functionality (such as storing preferences
+  using `getSharedPreferences()`).
+- Tried to work around the `Context` problem by using the
+  `@Composable` annotation. This works, since the `Context` can be
+  accessed from `@Composable` functions when in Android-specific
+  code by using `LocalContext.current`. But then the
+  `@Composable`-annotated functions cannot be called from any
+  other scope (such as from inside a launched effect, or from a button
+  `onClick` handler). And storing user preferences is anyway something
+  that should not be a part of the `@Composable` flow.
+- Finally gave up and used the late initialization techique described
+  [here](https://proandroiddev.com/how-to-avoid-asking-for-android-context-in-kotlin-multiplatform-libraries-api-d280a4adebd2).
+  Now the Android library implementation gets the Application context
+  on startup, and just uses that directly.
 
 ## Navigation
 

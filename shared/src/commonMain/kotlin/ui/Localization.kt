@@ -1,13 +1,14 @@
 package fi.tuska.beerclock.ui
 
 import androidx.compose.ui.text.intl.Locale
-import fi.tuska.beerclock.domain.Gender
+import fi.tuska.beerclock.settings.Gender
 
-val strings = when(Locale.current.language) {
+val strings = when (Locale.current.language) {
     "fi" -> FiStrings
     "en" -> EnStrings
     else -> EnStrings
 }
+
 interface Strings {
     val appName: String
     val menu: MenuStrings
@@ -29,7 +30,7 @@ interface Strings {
     }
 
     interface SettingsStrings {
-        val ageLabel: String
+        val weightLabel: String
         val genderLabel: String
     }
 
@@ -51,12 +52,14 @@ object EnStrings : Strings {
     }
 
     override val settings = Settings
+
     object Settings : Strings.SettingsStrings {
-        override val ageLabel = "Age"
+        override val weightLabel = "Weight in kg"
         override val genderLabel = "Gender"
     }
 
     override val gender = Gender
+
     object Gender : Strings.GenderStrings {
         override val MALE = "Male"
         override val FEMALE = "Female"
@@ -75,12 +78,14 @@ object FiStrings : Strings {
     }
 
     override val settings = Settings
+
     object Settings : Strings.SettingsStrings {
-        override val ageLabel = "Ikä"
+        override val weightLabel = "Paino kiloina"
         override val genderLabel = "Sukupuoli"
     }
 
     override val gender = Gender
+
     object Gender : Strings.GenderStrings {
         override val MALE = "Mies"
         override val FEMALE = "Nainen"

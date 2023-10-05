@@ -24,7 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import fi.tuska.beerclock.domain.Gender
+import fi.tuska.beerclock.settings.Gender
 
 @Composable
 fun GenderSelector(initialValue: Gender) {

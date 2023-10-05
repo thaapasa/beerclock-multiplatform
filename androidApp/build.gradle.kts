@@ -35,6 +35,9 @@ android {
     androidResources {
         generateLocaleConfig = true
     }
+    dependencies {
+        implementation("androidx.startup:startup-runtime:1.1.1")
+    }
     kotlin {
         jvmToolchain(17)
     }
