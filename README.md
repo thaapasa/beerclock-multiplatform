@@ -11,5 +11,3 @@ must use a proper blood alcohol measuring tool.
 This project is based on the Jetpack Compose Multiplatform project, and
 it has been created from their
 [project template](https://github.com/JetBrains/compose-multiplatform-template).
-
-See the original [template README](./Template%20README.md).
