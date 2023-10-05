@@ -10,16 +10,16 @@ Development machine:
 
 ## Links to resources
 
-- [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
-  and the
-  [Getting started](https://github.com/JetBrains/compose-multiplatform/#readme)
-  guide
-- Compose Multiplatform
-  [example project](https://github.com/JetBrains/compose-multiplatform/tree/master/examples)
-- Compose Multiplatform [project template](https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme)
-- Jetpack Compose
-  [documentation](https://developer.android.com/jetpack/compose) and
-  [material UI components](https://developer.android.com/jetpack/compose/components)
+Compose Multiplatform
+
+- [Project page](https://www.jetbrains.com/lp/compose-multiplatform/)
+- [Getting started -guide](https://github.com/JetBrains/compose-multiplatform/#readme)
+- [Project template](https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme)
+- [Example projects](https://github.com/JetBrains/compose-multiplatform/tree/master/examples)
+
+Jetpack Compose
+- [Documentation](https://developer.android.com/jetpack/compose)
+- [Material UI components](https://developer.android.com/jetpack/compose/components)
 
 ## Creating the project template
 
