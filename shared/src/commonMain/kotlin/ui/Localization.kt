@@ -1,4 +1,4 @@
-package fi.tuska.beerclock
+package fi.tuska.beerclock.ui
 
 import androidx.compose.ui.text.intl.Locale
 
