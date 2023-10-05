@@ -170,3 +170,20 @@ _Wednesday, Oct 4th 2023_
   resources. This was enough to allow changing the project language
   in Android's own app configuraten menu, and it works with the
   custom localization code.
+
+## App state
+
+_Thursday, Oct 5th 2023_
+
+- Moving on to state handling. And example
+  [todo app](https://github.com/JetBrains/compose-multiplatform/blob/master/examples/todoapp-lite)
+  has some examples of
+  [state handling](https://github.com/JetBrains/compose-multiplatform/blob/master/examples/todoapp-lite/shared/src/commonMain/kotlin/example/todoapp/lite/common/RootStore.kt).
+  Started creating custom store for storing user settings so I can
+  create a settings page for the app.
+- ChatGPT was again helpful in reminding how enum classes work in
+  Kotlin, what the `internal` visibility modifier means exactly, and
+  how to type Composables that take other Composable as parameter
+  (some lambda-wrapping was needed because `@Composable` references
+  are not supported out-of-the-box).
+
