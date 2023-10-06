@@ -2,7 +2,6 @@ rootProject.name = "Beer Clock"
 
 include(":androidApp")
 include(":shared")
-include(":desktopApp")
 
 pluginManagement {
     repositories {
