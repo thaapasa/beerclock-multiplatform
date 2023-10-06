@@ -101,3 +101,41 @@ _Friday, Oct 6th 2023_
   found when building the iOS app.
 - Switched to [Voyager](https://voyager.adriel.cafe/) and the basic
   navigation worked out-of-the-box.
+
+## Random error hunting
+
+Android Studio kept nagging me about _Duplicate content roots detected_.
+I did not feel like getting to know about this detail right now, so
+I just dumped the error message to ChatGPT, and pasted it a couple of
+my Gradle configuration files. This is an excerpt of ChatGPT's
+response:
+
+> Your project setup is for a Kotlin Multiplatform project that targets
+  Android and iOS. Let's address the issue regarding the "Duplicate content roots detected".
+>
+> From your shared build.gradle.kts:
+
+```kotlin
+android {
+ ...
+ sourceSets["main"].resources.srcDirs("src/commonMain/resources")
+ ...
+}
+```
+> This configuration tells Android's "main" source set to include
+  src/commonMain/resources as its resource directory. However,
+  Android Studio recognizes src/commonMain/resources as the
+  resources directory for your Kotlin common source set by default.
+>
+> This overlap between Android's "main" source set and Kotlin's
+  "commonMain" source set is the source of your "Duplicate content
+  roots detected" error.
+>
+> To fix it:
+> Remove the Overlap in shared/build.gradle.kts: Simply remove or
+  comment out the line that adds src/commonMain/resources to Android's
+  "main" source set.
+>
+> ...
+
+Right! That did it. Man I'm glad I don't need to think myself anymore 🤯
