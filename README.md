@@ -11,3 +11,7 @@ must use a proper blood alcohol measuring tool.
 This project is based on the Jetpack Compose Multiplatform project, and
 it has been created from their
 [project template](https://github.com/JetBrains/compose-multiplatform-template).
+
+![Beer time](./beertime.jpeg)<br/>
+_Illustration courtesy of DALL-E 3 via Bing_<br />
+_Prompt: dark and moody image of a beer glass as a clock with the time slowly ticking away_
