@@ -1,8 +1,8 @@
 package fi.tuska.beerclock.common
 
 import androidx.compose.runtime.Composable
-import fi.tuska.beerclock.ui.MainLayout
-import fi.tuska.beerclock.ui.MainScreen
+import fi.tuska.beerclock.common.ui.MainLayout
+import fi.tuska.beerclock.common.ui.MainScreen
 
 @Composable
 fun App() {

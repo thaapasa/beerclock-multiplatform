@@ -237,6 +237,35 @@ _Thursday, Oct 5th 2023_
 - Trying out [Appyx](https://bumble-tech.github.io/appyx/) next for
   navigation.
 
+
+_Friday, Oct 6th 2023_
+
+- Started integrating Appyx by adding the dependencies
+  ```
+  implementation("com.bumble.appyx:appyx-navigation:2.0.0-alpha08")
+  api("com.bumble.appyx:backstack:2.0.0-alpha08")
+  ```
+  to the `commonMain` source set. It seems that Appyx is about to
+  release the 2.x version of their library, but since their site
+  already lists the 2.x version and doesn't state that it should not
+  yet be used, I'm gonna try it out even though it's alpha.
+- Started creating navigation based on the
+  [Quick start guide](https://bumble-tech.github.io/appyx/navigation/quick-start/).
+- Noticed that the code samples for the Desktop version seem to be
+  out-of-date. No sense in banging my head against the wall here, since
+  Desktop is not an interesting target for me.
+- Dropped Desktop from the project.
+- Noticed that running a full rebuild of the project (Rebuild Project
+  from Android Studio) takes a really long time, like 5-10 minutes.
+  Gradle also seems to get the caches broken if the Gradle build files
+  are changed too much, especially when removing stuff or making
+  larger changes to the project setup.
+- To fix Gradle build, you may need to do any or all of the following:
+  - run cleanup script `./cleanup.sh`
+  - clean project with `./gradlew clean`
+  - clear user Gradle caches from e.g. `~/.gradle/caches`
+  - invalidate IDE caches (Android Studio: File → Invalidate Caches)
+
 ## TODO:
 
 - Charts: [AAY-chart](https://github.com/TheChance101/AAY-chart)
