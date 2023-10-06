@@ -21,6 +21,9 @@ Jetpack Compose
 - [Documentation](https://developer.android.com/jetpack/compose)
 - [Material UI components](https://developer.android.com/jetpack/compose/components)
 
+Other resources
+- [Awesome Kotlin Multiplatform](https://github.com/terrakok/kmp-awesome#-compose-ui)
+
 ## Creating the project template
 
 _Wednesday, Oct 4th 2023_
