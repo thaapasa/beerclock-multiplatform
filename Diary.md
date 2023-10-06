@@ -6,7 +6,7 @@ Development machine:
 - MacOS Sonoma 14.0
 - XCode 15.0
 - Android Studio Giraffe 2022.3.1 Patch 2
-- OpenJDK 16 (from Homebrew, see diary below)
+- OpenJDK 17 (from Homebrew, see diary below)
 
 ## Links to resources
 
