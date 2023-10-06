@@ -4,8 +4,10 @@ This diary records setting up the project and learning about the
 current bleeding edge libraries for multiplatform app development
 with Jetpack Compose Multiplatform.
 
-![Somewhat frustrating](./frustration.jpeg)<br/>
-_Spoiler: it can be somewhat frustrating_
+<p align="center" width="100%">
+<img src="./frustration.jpeg" alt="Somewhat frustrating" width="500" /><br/>
+<i>Spoiler: it can be somewhat frustrating</i>
+</p>
 
 ## Development machine
 
