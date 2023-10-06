@@ -8,9 +8,10 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
-import fi.tuska.beerclock.common.DrinksScreen
-import fi.tuska.beerclock.common.SettingsScreen
-import fi.tuska.beerclock.common.StatisticsScreen
+import fi.tuska.beerclock.common.localization.strings
+import fi.tuska.beerclock.common.screens.DrinksScreen
+import fi.tuska.beerclock.common.screens.SettingsScreen
+import fi.tuska.beerclock.common.screens.StatisticsScreen
 
 @Composable
 fun DrawerContent(selectScreen: (select: Screen) -> Unit) {

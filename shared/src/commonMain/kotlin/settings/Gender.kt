@@ -7,9 +7,8 @@ enum class Gender {
         fun safeValueOf(s: String): Gender? = try {
             Gender.valueOf(s)
         } catch (e: IllegalArgumentException) {
-            // Thrown if s doesn't match
+            // Thrown if s doesn't match any gender
             null
         }
-
     }
 }

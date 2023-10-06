@@ -66,8 +66,8 @@ Getting project template running on all platforms:
 _Wednesday, Oct 4th 2023_
 
 - To get started with Compose, I copy-pasted the example application
-  [main class](../shared/src/commonMain/kotlin/App.kt) code to ChatGPT+,
-  with this leading text:
+  [main class](https://github.com/JetBrains/compose-multiplatform-template/blob/main/shared/src/commonMain/kotlin/App.kt)
+  code to ChatGPT+, with this leading text:
 
   > This is the sample code file from a Jetpack Compose Multiplatform
   template project. Can you go through it line by line and explain what
@@ -134,7 +134,7 @@ _Wednesday, Oct 4th 2023_
   Some [discussion](https://github.com/JetBrains/compose-multiplatform/issues/425)
   on this topic.
 - Created custom
-  [localization code](../shared/src/commonMain/kotlin/ui/Localization.kt)
+  [localization code](../shared/src/commonMain/kotlin/localization/Strings.kt)
   to the project.
 - Added localization customization to Android project
   [configuration](../androidApp/build.gradle.kts):

@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import fi.tuska.beerclock.common.localization.strings
 import fi.tuska.beerclock.common.settings.Gender
 
 @Composable

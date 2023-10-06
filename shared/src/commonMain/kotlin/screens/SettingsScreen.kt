@@ -1,4 +1,4 @@
-package fi.tuska.beerclock.common.ui
+package fi.tuska.beerclock.common.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -12,11 +12,23 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import cafe.adriel.voyager.core.screen.Screen
+import fi.tuska.beerclock.common.localization.strings
 import fi.tuska.beerclock.common.settings.UserStore
+import fi.tuska.beerclock.common.ui.GenderSelector
+import fi.tuska.beerclock.common.ui.MainLayout
 import fi.tuska.beerclock.common.util.safeToDouble
 
+object SettingsScreen : Screen {
+
+    @Composable
+    override fun Content() {
+        MainLayout(content = { SettingsPage() })
+    }
+}
+
 @Composable
-fun MainScreen() {
+fun SettingsPage() {
 
     val userPrefs = remember { UserStore() }
 
