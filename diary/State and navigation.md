@@ -104,6 +104,8 @@ _Friday, Oct 6th 2023_
 
 ## Random error hunting
 
+_Friday, Oct 6th 2023_
+
 Android Studio kept nagging me about _Duplicate content roots detected_.
 I did not feel like getting to know about this detail right now, so
 I just dumped the error message to ChatGPT, and pasted it a couple of
