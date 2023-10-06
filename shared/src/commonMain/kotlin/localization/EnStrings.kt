@@ -14,6 +14,7 @@ object EnStrings : Strings {
     override val settings = Settings
 
     object Settings : Strings.SettingsStrings {
+        override val title = "Settings"
         override val weightLabel = "Weight in kg"
         override val genderLabel = "Gender"
     }

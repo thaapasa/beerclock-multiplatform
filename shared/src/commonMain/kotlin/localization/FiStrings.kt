@@ -14,6 +14,7 @@ object FiStrings : Strings {
     override val settings = Settings
 
     object Settings : Strings.SettingsStrings {
+        override val title = "Asetukset"
         override val weightLabel = "Paino kiloina"
         override val genderLabel = "Sukupuoli"
     }

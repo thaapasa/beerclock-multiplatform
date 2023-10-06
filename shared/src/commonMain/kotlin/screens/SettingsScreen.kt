@@ -16,14 +16,14 @@ import cafe.adriel.voyager.core.screen.Screen
 import fi.tuska.beerclock.common.localization.strings
 import fi.tuska.beerclock.common.settings.UserStore
 import fi.tuska.beerclock.common.ui.GenderSelector
-import fi.tuska.beerclock.common.ui.MainLayout
+import fi.tuska.beerclock.common.ui.SubLayout
 import fi.tuska.beerclock.common.util.safeToDouble
 
 object SettingsScreen : Screen {
 
     @Composable
     override fun Content() {
-        MainLayout(content = { SettingsPage() })
+        SubLayout(content = { SettingsPage() }, title = strings.settings.title)
     }
 }
 

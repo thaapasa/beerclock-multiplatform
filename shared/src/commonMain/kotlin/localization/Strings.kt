@@ -30,6 +30,7 @@ interface Strings {
     }
 
     interface SettingsStrings {
+        val title: String
         val weightLabel: String
         val genderLabel: String
     }
