@@ -1,4 +1,4 @@
-package fi.tuska.beerclock.settings
+package fi.tuska.beerclock.common.settings
 
 enum class Gender {
     MALE, FEMALE;

@@ -1,4 +1,4 @@
-package fi.tuska.beerclock.ui
+package fi.tuska.beerclock.common.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
@@ -24,7 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import fi.tuska.beerclock.settings.Gender
+import fi.tuska.beerclock.common.settings.Gender
 
 @Composable
 fun GenderSelector(selectedValue: Gender, onSelectGender: (gender: Gender) -> Unit) {

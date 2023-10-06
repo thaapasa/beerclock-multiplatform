@@ -1,4 +1,4 @@
-package fi.tuska.beerclock
+package fi.tuska.beerclock.common
 
 import androidx.compose.runtime.Composable
 import fi.tuska.beerclock.ui.MainLayout

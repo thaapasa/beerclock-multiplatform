@@ -1,7 +1,7 @@
-package fi.tuska.beerclock.ui
+package fi.tuska.beerclock.common.ui
 
 import androidx.compose.ui.text.intl.Locale
-import fi.tuska.beerclock.settings.Gender
+import fi.tuska.beerclock.common.settings.Gender
 
 val strings = when (Locale.current.language) {
     "fi" -> FiStrings

@@ -26,7 +26,7 @@
             tools:node="merge">
 
             <meta-data
-                android:name="fi.tuska.beerclock.settings.PreferenceInitializer"
+                android:name="fi.tuska.beerclock.common.settings.PreferenceInitializer"
                 android:value="androidx.startup" />
         </provider>
     </application>

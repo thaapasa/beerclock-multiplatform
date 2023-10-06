@@ -1,4 +1,4 @@
-package fi.tuska.beerclock.ui
+package fi.tuska.beerclock.common.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

@@ -1,4 +1,4 @@
-package fi.tuska.beerclock.ui
+package fi.tuska.beerclock.common.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -12,8 +12,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import fi.tuska.beerclock.settings.UserStore
-import fi.tuska.beerclock.util.safeToDouble
+import fi.tuska.beerclock.common.settings.UserStore
+import fi.tuska.beerclock.common.util.safeToDouble
 
 @Composable
 fun MainScreen() {
