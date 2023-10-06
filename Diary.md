@@ -268,6 +268,13 @@ _Friday, Oct 6th 2023_
   - clean project with `./gradlew clean`
   - clear user Gradle caches from e.g. `~/.gradle/caches`
   - invalidate IDE caches (Android Studio: File → Invalidate Caches)
+- So, it turns out alpha versions of libraries can be uncooperative.
+  The appyx library seems promising but after a day of banging my head
+  to the wall I could not get the iOS version of the app to build. For
+  some reason the `Node` classes from the appyx library could not be
+  found when building the iOS app.
+- Switched to [Voyager](https://voyager.adriel.cafe/) and the basic
+  navigation worked out-of-the-box.
 
 ## TODO:
 

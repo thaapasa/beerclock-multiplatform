@@ -17,7 +17,7 @@ kotlin {
             isStatic = true
         }
     }
-
+    val voyagerVersion = "1.0.0-rc07"
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -26,6 +26,7 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
             }
         }
         val androidMain by getting {
