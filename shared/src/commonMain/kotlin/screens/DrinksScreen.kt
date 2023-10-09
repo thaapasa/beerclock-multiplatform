@@ -11,7 +11,7 @@ object DrinksScreen : Screen {
     override fun Content() {
         SubLayout(
             content = { Text("Juomien asetukset. Täältä voi muokata juomalistaa.") },
-            title = "Juomat"
+            title = "Juomat",
         )
     }
 }

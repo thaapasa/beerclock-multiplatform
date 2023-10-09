@@ -1,16 +1,32 @@
 package fi.tuska.beerclock.common.screens
 
+import MR
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import cafe.adriel.voyager.core.screen.Screen
+import dev.icerock.moko.resources.compose.painterResource
+import fi.tuska.beerclock.common.localization.strings
 import fi.tuska.beerclock.common.ui.MainLayout
+import org.jetbrains.compose.resources.ExperimentalResourceApi
 
+@OptIn(ExperimentalResourceApi::class)
 object HomeScreen : Screen {
 
     @Composable
     override fun Content() {
-        MainLayout(content = {
-            Text("Appiksen päänäkymä. Tähän laitetaan tieto tämän päivän tilanteesta")
-        })
+        MainLayout(
+            content = {
+                Text("Appiksen päänäkymä. Tähän laitetaan tieto tämän päivän tilanteesta")
+            },
+            actionButton = {
+                FloatingActionButton({}) {
+                    Icon(painter = painterResource(MR.images.sports_bar),
+                        contentDescription = strings.home.addDrink
+                    )
+                }
+            }
+        )
     }
 }

@@ -31,7 +31,8 @@ fun SubLayout(content: @Composable (PaddingValues) -> Unit, title: String) {
                             )
                         }
                     })
-            }, content = content
+            },
+            content = content
         )
     }
 }

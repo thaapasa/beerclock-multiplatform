@@ -2,11 +2,12 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("dev.icerock.mobile.multiplatform-resources")
 }
 
 kotlin {
     androidTarget()
-
+    jvm()
     listOf(
         iosX64(),
         iosArm64(),
@@ -27,9 +28,11 @@ kotlin {
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
                 implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
+                implementation("dev.icerock.moko:resources-compose:0.23.0")
             }
         }
         val androidMain by getting {
+            dependsOn(commonMain)
             dependencies {
                 api("androidx.activity:activity-compose:1.7.2")
                 api("androidx.appcompat:appcompat:1.6.1")
@@ -46,7 +49,24 @@ kotlin {
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
         }
+        val jvmMain by getting {
+            dependsOn(commonMain)
+            dependencies {
+                implementation("androidx.startup:startup-runtime:1.1.1")
+            }
+        }
     }
+}
+
+multiplatformResources {
+    multiplatformResourcesPackage = "" // required
+    multiplatformResourcesClassName = "MR" // optional, default MR
+}
+
+dependencies {
+    commonMainApi("dev.icerock.moko:resources:0.23.0")
+    commonMainApi("dev.icerock.moko:resources-compose:0.23.0") // for compose multiplatform
+    // commonTestImplementation("dev.icerock.moko:resources-test:0.23.0") // for testing
 }
 
 android {
@@ -55,9 +75,8 @@ android {
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
-    // TODO: This was set in the project template. However, it should be part of the defaults
-    // and therefore it does not need to be manually included. Removing it for now.
-    // sourceSets["main"].resources.srcDirs("src/commonMain/resources")
+    // This causes a "duplicate content roots detected" error but it is actually needed.
+    sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
         minSdk = (findProperty("android.minSdk") as String).toInt()

@@ -11,16 +11,16 @@ val strings: Strings = when (Locale.current.language) {
 
 interface Strings {
     val appName: String
+
+    val home: HomeStrings
     val menu: MenuStrings
     val settings: SettingsStrings
 
-    fun forGender(g: Gender): String =
-        when (g) {
-            Gender.MALE -> gender.male
-            Gender.FEMALE -> gender.female
-        }
-
     val gender: GenderStrings
+
+    interface HomeStrings {
+        val addDrink: String
+    }
 
     interface MenuStrings {
         val main: String
@@ -39,4 +39,11 @@ interface Strings {
         val male: String
         val female: String
     }
+
+    fun forGender(g: Gender): String =
+        when (g) {
+            Gender.MALE -> gender.male
+            Gender.FEMALE -> gender.female
+        }
+
 }

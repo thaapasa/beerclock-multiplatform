@@ -32,6 +32,8 @@ Jetpack Compose
 
 Other resources
 - [Awesome Kotlin Multiplatform](https://github.com/terrakok/kmp-awesome#-compose-ui)
+- [Exyte's impressions about Jetpack Compose Multiplatform](https://exyte.com/blog/jetpack-compose-multiplatform)
+- [From Android to Multiplatform: Real 100% Jetpack Compose](https://markonovakovic.medium.com/from-android-to-multiplatform-real-100-jetpack-compose-app-part-1-resources-a5db60f1ed73)
 
 ## The journey
 

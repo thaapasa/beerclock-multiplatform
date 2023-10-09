@@ -3,6 +3,11 @@ package fi.tuska.beerclock.common.localization
 object FiStrings : Strings {
     override val appName = "Kaljakello"
     override val menu = Menu
+    override val home = Home
+
+    object Home: Strings.HomeStrings {
+        override val addDrink = "Juo!"
+    }
 
     object Menu : Strings.MenuStrings {
         override val main = "Valikko"
