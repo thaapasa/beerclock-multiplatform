@@ -23,7 +23,8 @@ Compose Multiplatform
 
 - [Project page](https://www.jetbrains.com/lp/compose-multiplatform/)
 - [Getting started -guide](https://github.com/JetBrains/compose-multiplatform/#readme)
-- [Project template](https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme)
+- [iOS + Android template](https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme)
+- [Multiplatform template](https://github.com/JetBrains/compose-multiplatform-template)
 - [Example projects](https://github.com/JetBrains/compose-multiplatform/tree/master/examples)
 
 Jetpack Compose
